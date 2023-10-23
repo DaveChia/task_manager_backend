@@ -14,7 +14,7 @@ class SetTaskCompletedAtRequest extends FormRequest
     public function rules()
     {
         return [
-            'completed_at' => ['required','date'],
+            'completed' => ['required','bool'],
         ];
     }
 }

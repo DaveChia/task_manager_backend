@@ -16,7 +16,7 @@ class TaskRequest extends FormRequest
         return [
             'name' => ['required','string','max:255', 'min:10'],
             'description' => ['nullable','string', 'min:10'],
-            'completed_at' => ['nullable','date'],
+            'completed' => ['nullable','bool'],
         ];
     }
 }
