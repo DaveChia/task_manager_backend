@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/tasks', [App\Http\Controllers\TaskController::class, 'index'])->name('task.index');
+Route::put('/tasks/{task}/set_completed_at', [App\Http\Controllers\TaskController::class, 'set_completed_at'])->name('task.set_completed_at');
+Route::put('/tasks/{task}', [App\Http\Controllers\TaskController::class, 'update'])->name('task.update');
 Route::post('/tasks', [App\Http\Controllers\TaskController::class, 'store'])->name('task.store');
